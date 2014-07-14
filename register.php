@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(4+2+2);
+include("header.php");
 
 if (file_exists("faces/".md5($_POST["email"])) ) {
 
@@ -38,7 +38,7 @@ imagecopy($dest, $src, 0, 0,$array1["x"]+5, $array1["y"]+5, $array1["width"], $a
 imagepng($dest, $facestorage."faces/cropped-".md5($email).".png");
 //imagegd($dest);
 
-echo "Your face has been added. Now try to <a href=login.php>login</a> with your email address and your face!";
+echo "<br>Your face has been added. Now try to <a href=login.php>login</a> with your email address and your face!";
 
 }
 
